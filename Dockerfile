@@ -22,7 +22,7 @@ ENV PATH /var/lib/neo4j/bin:$PATH
 
 WORKDIR /var/lib/neo4j
 
-COPY ecoli_21.5_v0.dump /backups/graph.db/graph.dump
+COPY ecoli_21.5_v0.1.dump /backups/graph.db/graph.dump
 
 RUN bin/neo4j-admin load --from=/backups/graph.db/graph.dump --database=graph.db --force && \
     rm /backups/graph.db/graph.dump
